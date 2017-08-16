@@ -1,0 +1,26 @@
+{
+  "name": "gulp_project",
+  "version": "0.0.0",
+  "authors": [
+    "narmatoff <narmatoff@ya.ru>"
+  ],
+  "main": "index.jade",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "dist/components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+  },
+  "description": "",
+  "homepage": ""
+}

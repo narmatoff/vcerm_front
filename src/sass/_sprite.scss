@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$fb-name: 'fb';
+$fb-x: 0px;
+$fb-y: 18px;
+$fb-offset-x: 0px;
+$fb-offset-y: -18px;
+$fb-width: 6px;
+$fb-height: 13px;
+$fb-total-width: 43px;
+$fb-total-height: 90px;
+$fb-image: '../img/sprite.png';
+$fb: (0px, 18px, 0px, -18px, 6px, 13px, 43px, 90px, '../img/sprite.png', 'fb', );
+$instagram-name: 'instagram';
+$instagram-x: 0px;
+$instagram-y: 31px;
+$instagram-offset-x: 0px;
+$instagram-offset-y: -31px;
+$instagram-width: 16px;
+$instagram-height: 16px;
+$instagram-total-width: 43px;
+$instagram-total-height: 90px;
+$instagram-image: '../img/sprite.png';
+$instagram: (0px, 31px, 0px, -31px, 16px, 16px, 43px, 90px, '../img/sprite.png', 'instagram', );
+$phone-icon-name: 'phone_icon';
+$phone-icon-x: 0px;
+$phone-icon-y: 47px;
+$phone-icon-offset-x: 0px;
+$phone-icon-offset-y: -47px;
+$phone-icon-width: 43px;
+$phone-icon-height: 43px;
+$phone-icon-total-width: 43px;
+$phone-icon-total-height: 90px;
+$phone-icon-image: '../img/sprite.png';
+$phone-icon: (0px, 47px, 0px, -47px, 43px, 43px, 43px, 90px, '../img/sprite.png', 'phone_icon', );
+$twitter-name: 'twitter';
+$twitter-x: 0px;
+$twitter-y: 8px;
+$twitter-offset-x: 0px;
+$twitter-offset-y: -8px;
+$twitter-width: 12px;
+$twitter-height: 10px;
+$twitter-total-width: 43px;
+$twitter-total-height: 90px;
+$twitter-image: '../img/sprite.png';
+$twitter: (0px, 8px, 0px, -8px, 12px, 10px, 43px, 90px, '../img/sprite.png', 'twitter', );
+$vk-name: 'vk';
+$vk-x: 0px;
+$vk-y: 0px;
+$vk-offset-x: 0px;
+$vk-offset-y: 0px;
+$vk-width: 14px;
+$vk-height: 8px;
+$vk-total-width: 43px;
+$vk-total-height: 90px;
+$vk-image: '../img/sprite.png';
+$vk: (0px, 0px, 0px, 0px, 14px, 8px, 43px, 90px, '../img/sprite.png', 'vk', );
+$spritesheet-width: 43px;
+$spritesheet-height: 90px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($fb, $instagram, $phone-icon, $twitter, $vk, );
+$spritesheet: (43px, 90px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+input[type=button],
+button {
+
+    border: none;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    width: auto;
+    padding: 0 3em;
+    height: 51px;
+    color: lighten($lightBlack, 30%);
+    background-color: $white;
+    font-size: 14px; // font-weight: 700;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0;
+    transition: all ease .2s;
+    &:hover {
+        box-shadow: 1px 2px 5px 0px rgba(24, 83, 148, 0.14);
+    }
+    &.bluebutton {
+        background-color: $darkBlue;
+        color: $white;
+        &:hover {
+            background-color: $lightBlue;
+        }
+    }
+    &.orangebutton {
+        background-color: $darkOrange;
+        color: $white;
+        &:hover {
+            background-color: $lightOrange;
+        }
+    }
+    &.arrowedbutton {
+        background-image: url(../img/svg/arrowedbutton.svg);
+        background-repeat: no-repeat;
+        background-position: 80% 50%;
+        padding-right: 4.5em;
+    }
+}
+
+a {
+    color: $darkBlue; // font-weight: 700;
+    // font-family:$HelR;
+    text-decoration: none;
+    &:hover {
+        color: $lightOrange;
+    }
+}

@@ -1,0 +1,28 @@
+@import "elements/header";
+@import "elements/ui";
+
+html,body{
+    font-family: $HelR;
+    font-size: 1em;
+}
+
+
+.logo {
+    height: 121px;
+    width: 103px;
+}
+
+.iconed_text {
+    .phone_icon {
+        @include sprite($phone_icon);
+    }
+    .search {}
+}
+
+.ui_block {
+    padding: 57px;
+    margin: 0 auto;
+    width: 1392px;
+    height: 700px;
+    border:1px solid #ccc;
+}

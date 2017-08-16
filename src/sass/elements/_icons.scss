@@ -1,0 +1,5 @@
+// иконки
+.phone_icon {
+    @include sprite($phone_icon);
+    display: inline-block;
+}

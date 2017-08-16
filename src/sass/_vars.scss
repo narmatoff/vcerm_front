@@ -1,0 +1,34 @@
+// vars for media-queries
+// exampl:
+//      @include screen($littleboy-min, $littleboy-max){
+//          background-color: #000;
+//      }
+
+// // widths
+// $littleboy-min: 0px;
+// $littleboy-max: 480px;
+// ////////////////////////////////
+// $middleboy-min: 320px;
+// $middleboy-max: 568px;
+// //////////////////////////////
+// $olderboy-min: 414px;
+// $olderboy-max: 736px;
+// //////////////////////////////
+$MaxWidt:1920px;
+$ContentWidt:1208px;
+$MiddleWidt:768px;
+$MinWidt:320px;
+
+
+// b&w
+$black:#000000;
+$lightBlack:#323232;
+$white:#fff;
+$grey:#edeff2;
+
+// main colors
+$darkBlue:#185394;
+$lightBlue:#2c7fda;
+$darkOrange:#fd7100;
+$lightOrange:#f88936;
+
