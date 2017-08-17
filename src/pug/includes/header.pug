@@ -1,7 +1,7 @@
 header
     .header
         .header_left
-            a(href="/")
+            a(href="/",title="На главную")
                 img(src="img/logo.png", alt="logo").logo
                 span ФГБУ Всероссийский центр экстренной и радиационной медицыны имени А.М. Никифорова МЧС России
         .header_right
@@ -29,4 +29,7 @@ header
             .header_right_bottom
                 .iconed_text
                     .phone_icon
-                    input(type="text").search
+                    .iconed_text_info
+                        span Телефон горячей линии
+                        a(href="tel:88123393939") +7 (812) 339-39-39
+                input(type="text",placeholder="Поиск по сайту").search

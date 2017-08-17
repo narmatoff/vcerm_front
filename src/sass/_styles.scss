@@ -1,7 +1,13 @@
 @import "elements/header";
 @import "elements/ui";
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $HelR;
+}
 
-html,body{
+html,
+body {
     font-family: $HelR;
     font-size: 1em;
 }
@@ -13,16 +19,46 @@ html,body{
 }
 
 .iconed_text {
-    .phone_icon {
-        @include sprite($phone_icon);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    &_info {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        span {
+            color: $white;
+            font-size: 0.8em;
+        }
+        a {
+            font-family: $Museo500;
+            color: $white;
+            font-size: 1.2em;
+            margin: 0.4em 0 0 1em;
+            transition: all ease .2s;
+            &:hover {
+                color: $darkOrange;
+            }
+        }
     }
-    .search {}
 }
+
+.search {}
+
+
+
 
 .ui_block {
     padding: 57px;
-    margin: 0 auto;
+    margin: 3em auto;
+    padding: 3em;
     width: 1392px;
-    height: 700px;
-    border:1px solid #ccc;
+    height: auto;
+    border: 1px solid #ccc;
+    .soc_icons {
+        background-color: $lightBlack;
+        padding: 3em;
+    }
 }

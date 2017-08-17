@@ -21,3 +21,125 @@ html(lang="en")
             br
             br
             a(href="#") Болезни и состояния
+            br
+            br
+            a(href="#").button.orangebutton.arrowedbutton Болезни и состояния
+
+            form(action="#")
+                fieldset
+                    legend Раздел формы
+
+                    label(for="id1") Имя
+                    input(type="text",name="id1",placeholder="Введите",required="required")#id1
+                    br
+                    br
+
+                    label(for="id2") email
+                    input(type="email",name="id2",placeholder="Введите")#id2
+                    br
+                    br
+
+                    label(for="id4") number
+                    input(type="number",name="id4",placeholder="Введите")#id4
+                    br
+                    br
+
+                    label(for="id5") date
+                    input(type="date",name="id5",placeholder="Введите")#id5
+                    br
+                    br
+                    legend checkbox
+
+                    input(type="checkbox")#id61
+                    label(for="id61") я даю свое согласие на передачю своих личных данных
+                    br
+                    br
+
+                    input(type="checkbox")#id62
+                    label(for="id62") checkbox
+                    br
+                    br
+                    input(type="checkbox")#id63
+                    label(for="id63") checkbox
+                    br
+                    br
+                    input(type="checkbox")#id64
+                    label(for="id64") checkbox
+                    br
+                    br
+                    input(type="checkbox")#id65
+                    label(for="id65") checkbox
+                    br
+                    br
+                    input(type="checkbox")#id66
+                    label(for="id66") checkbox
+                    br
+                    br
+                    input(type="checkbox")#id67
+                    label(for="id67") checkbox
+                    br
+                    br
+                    input(type="checkbox")#id68
+                    label(for="id68") checkbox
+                    br
+                    br
+                    legend radio
+                    input(type="radio",name="gender")#id7
+                    label(for="id7") radio1
+                    br
+                    br
+                    input(type="radio",name="gender")#id8
+                    label(for="id8") radio2
+                    br
+                    br
+                    input(type="radio",name="gender")#id9
+                    label(for="id9") radio3
+                    br
+                    br
+                    input(type="radio",name="gender")#id10
+                    label(for="id10") radio4
+                    br
+                    br
+                    input(type="radio",name="gender")#id11
+                    label(for="id11") radio5
+                    br
+                    br
+                    input(type="radio",name="gender")#id12
+                    label(for="id12") radio6
+                    br
+                    br
+                    legend select
+                    label(for="id13") select
+                    select#id13
+                        optgroup(label="Выберите")
+                            option(value="Выберите 1") Клинический бензо-эелектроинструмент
+                            option(value="Выберите 2") Выберите 2
+                            option(value="Выберите 3") Выберите 3
+                            option(value="Выберите 1") Выберите 1
+                            option(value="Выберите 2") Выберите 2
+                            option(value="Выберите 3") Выберите 3
+                        optgroup(label="введите")
+                            option(value="введите 1") введите 1
+                            option(value="введите 2") введите 2
+                            option(value="введите 3") введите 3
+                            option(value="введите 1") введите 1
+                            option(value="введите 2") введите 2
+                            option(value="введите 3") введите 3
+                    br
+                    br
+
+                    label(for="id3") textarea
+                    textarea(placeholder="Введите",id="id3")
+                input(type="submit", value="Отправить").orangebutton
+            .soc_icons
+                .vk_big
+                .vk_big_tr
+                .fb_big
+                .fb_big_tr
+                .instagram_big
+                .instagram_big_tr
+                .twitter_big
+                .twitter_big_tr
+
+        include ./includes/tmp_nav.pug
+        include ./includes/footer.pug

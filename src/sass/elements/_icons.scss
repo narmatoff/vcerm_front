@@ -3,3 +3,65 @@
     @include sprite($phone_icon);
     display: inline-block;
 }
+
+.vk {
+    @include sprite($vk);
+    display: inline-block;
+}
+
+.vk_big {
+    @include sprite($vk_big);
+    display: inline-block;
+}
+
+.vk_big_tr {
+    @include sprite($vk_big_tr);
+    display: inline-block;
+}
+
+.fb_big {
+    @include sprite($fb_big);
+    display: inline-block;
+}
+
+.fb {
+    @include sprite($fb);
+    display: inline-block;
+}
+
+.fb_big_tr {
+    @include sprite($fb_big_tr);
+    display: inline-block;
+}
+
+.instagram_big {
+    @include sprite($instagram_big);
+    display: inline-block;
+}
+
+.instagram {
+    @include sprite($instagram);
+    display: inline-block;
+}
+
+.instagram_big_tr {
+    @include sprite($instagram_big_tr);
+    display: inline-block;
+}
+
+
+.twitter {
+    @include sprite($twitter);
+    display: inline-block;
+}
+
+
+.twitter_big {
+    @include sprite($twitter_big);
+    display: inline-block;
+}
+
+.twitter_big_tr {
+    @include sprite($twitter_big_tr);
+    display: inline-block;
+}

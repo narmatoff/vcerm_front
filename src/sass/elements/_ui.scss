@@ -1,6 +1,9 @@
 input[type=button],
-button {
-
+input[type=submit],
+input[type=reset],
+button,
+.button {
+    font-family: $HelR;
     border: none;
     border: 1px solid $grey;
     border-radius: 3px;
@@ -9,13 +12,18 @@ button {
     height: 51px;
     color: lighten($lightBlack, 30%);
     background-color: $white;
-    font-size: 14px; // font-weight: 700;
+    font-size: 0.9em; // font-weight: 700;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
     box-shadow: 0;
     transition: all ease .2s;
+    display: inline-block;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     &:hover {
         box-shadow: 1px 2px 5px 0px rgba(24, 83, 148, 0.14);
     }
@@ -36,8 +44,58 @@ button {
     &.arrowedbutton {
         background-image: url(../img/svg/arrowedbutton.svg);
         background-repeat: no-repeat;
-        background-position: 80% 50%;
+        background-position: 80% 52%;
         padding-right: 4.5em;
+    }
+}
+
+legend {
+    margin: 1em 0; // font-weight: bold;
+    text-transform: uppercase;
+}
+
+fieldset {
+    margin: 1em 0;
+}
+
+label {
+    display: block;
+    font-size: 0.9em;
+    margin: .5em 0;
+    &.error {
+        color: red;
+    }
+}
+
+textarea {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d1dae4;
+    box-sizing: border-box;
+    background-color: #ffffff; // width: 287px;
+    // height: 128px;
+    padding: 1em;
+    font-size: 0.9em;
+    &:hover {
+        box-shadow: 0px 1px 4px 0px rgba(44, 127, 218, 0.23);
+    }
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date] {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d9d9d9;
+    box-sizing: border-box;
+    background-color: #ffffff; // width: 288px;
+    height: 36px;
+    padding: 0 1em 0 1em;
+    &.error {
+        border-color: red;
     }
 }
 
@@ -47,5 +105,146 @@ a {
     text-decoration: none;
     &:hover {
         color: $lightOrange;
+    }
+}
+
+form {
+    display: block;
+    box-sizing: border-box;
+    margin: 3em 0;
+}
+
+.selectwrap {
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d1dae4;
+    box-sizing: border-box; // width: 288px;
+    height: 48px;
+    transition: all ease .2s;
+    padding: 0 0 0 0;
+    cursor: pointer;
+
+    &:after {
+        content: "";
+        width: 40px;
+        height: 31px;
+        position: absolute;
+        top: 15%;
+        right: 0;
+        background: url(../img/svg/select_arr.svg) no-repeat center center;
+        z-index: 1;
+        border-left: 1px solid rgba(0, 0, 0, .1);
+        background-color: #fff;
+    }
+    &:hover {
+        box-shadow: 0px 1px 4px 0px rgba(44, 127, 218, 0.23);
+    }
+}
+
+.selectwrap select {
+    outline: none;
+    background: transparent;
+    border: none;
+    width: 110%;
+    height: 100%;
+    padding: 0 5em 0 1em;
+    position: relative;
+    z-index: 2;
+    color: $darkBlue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+// checkboxes
+input[type=checkbox] {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    &:checked+label {
+        @include sprite($checkbox); // background-position: 0 -18px;
+        width: auto;
+
+        &:hover {
+            @include sprite($checkbox_chhov); // background-position: 0 -18px;
+            width: auto;
+        }
+    }
+    &+label {
+        &:hover {
+            @include sprite($checkbox_hov); // background-position: 0 -18px;
+            width: auto;
+        }
+        padding-left: 30px;
+        height: 18px;
+
+        display: inline-block;
+        line-height: 18px;
+        background-repeat: no-repeat; // background-position: 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        @include sprite($checkbox_cln); // background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_e6364785bfe886ff49a404b90dfce30f.png);
+        width:auto;
+        user-select: none;
+        &.chk {
+            @include sprite($checkbox); // background-position: 0 -18px;
+            width: auto;
+        }
+    }
+}
+
+
+// radio btns
+input[type=radio] {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    &:checked+label {
+        @include sprite($radio); // background-position: 0 -18px;
+        width: auto;
+
+        &:hover {
+            @include sprite($radio_chhov); // background-position: 0 -18px;
+            width: auto;
+        }
+    }
+    &+label {
+        &:hover {
+            @include sprite($checkbox_hov); // background-position: 0 -18px;
+            width: auto;
+        }
+        padding-left: 30px;
+        height: 18px;
+        display: inline-block;
+        line-height: 18px;
+        background-repeat: no-repeat; // background-position: 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        @include sprite($checkbox_cln); // background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_e6364785bfe886ff49a404b90dfce30f.png);
+        width: auto;
+
+        user-select: none;
+        &.chk {
+            @include sprite($checkbox); // background-position: 0 -18px;
+            width: auto;
+        }
     }
 }
