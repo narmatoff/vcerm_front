@@ -1,5 +1,13 @@
 @import "elements/header";
+@import "elements/nav";
+@import "elements/slider";
+@import "elements/main_page";
+
+
 @import "elements/ui";
+
+
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -10,6 +18,67 @@ html,
 body {
     font-family: $HelR;
     font-size: 1em;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.content_width {
+    width: $ContentWidt; // outline:1px dotted red;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.white {
+    color: $white;
+}
+
+h1 {
+    font-family: $Museo500;
+    color: $darkBlue;
+    font-size: 2.75em;
+    margin: 1em 0;
+}
+
+h2 {
+    font-family: $Museo500;
+    color: #185394;
+    font-size: 2.1em;
+    margin: 1em 0;
+}
+
+h3 {
+    font-family: $Museo700;
+    color: $darkBlue;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+h4 {
+    font-family: $Museo700;
+    color: $darkBlue;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+h5 {
+    font-family: $Museo700;
+    color: $darkBlue;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+h6 {
+    font-family: $Museo700;
+    color: $darkBlue;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    margin: 1em 0;
 }
 
 
@@ -47,14 +116,28 @@ body {
 
 .search {}
 
-
+.be_pacient_online {
+    background-image: url('../img/bepatientonline.png');
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 18.125em;
+    height: 14em;
+    .be_pacient_online_h {
+        font-family: $Museo500;
+        color: $white;
+        font-size: 1.57em;
+        text-align: center;
+        margin: 0 0 1em 0;
+    }
+}
 
 
 .ui_block {
     padding: 57px;
-    margin: 3em auto;
-    padding: 3em;
-    width: 1392px;
+    margin: 3em;
+    padding: 3em; // width: 1392px;
     height: auto;
     border: 1px solid #ccc;
     .soc_icons {

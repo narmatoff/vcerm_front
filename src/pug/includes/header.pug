@@ -1,5 +1,5 @@
 header
-    .header
+    .header.content_width
         .header_left
             a(href="/",title="На главную")
                 img(src="img/logo.png", alt="logo").logo
@@ -33,3 +33,5 @@ header
                         span Телефон горячей линии
                         a(href="tel:88123393939") +7 (812) 339-39-39
                 input(type="text",placeholder="Поиск по сайту").search
+    include mainmenu.pug
+    include slider.pug

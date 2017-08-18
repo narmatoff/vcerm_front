@@ -1,0 +1,105 @@
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.slider_wr {
+    // outline: 1px dotted red;
+    background-image: url('../img/slider_back.png');
+    background-repeat: no-repeat;
+    height: 26em;
+    background-position: 50% 50%;
+    position: relative;
+
+    &_core {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &_item {
+            // opacity: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            &_left {
+                height: 100%;
+                width: 40%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: flex-start;
+
+                &_head {
+                    font-family: $Museo500;
+                    color: $white;
+                    font-size: 2.75em;
+                    margin:0 0 .5em 0;
+                }
+                &_slogan {
+                    font-family: $Museo500;
+                    color: $darkBlue;
+                    font-size: 1.55em;
+                    margin:0 0 1em 0;
+
+                }
+                &_button {}
+            }
+            &_right {
+                height: 100%;
+                width: 60%;
+                img {
+                    // height:98%;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    margin: 0 0.2em 0 0;
+                }
+            }
+        }
+    }
+}
+
+
+.slider_wr_core_pagination {
+    position: absolute;
+    left: 0;
+    bottom: 2em;
+    z-index: 1;
+    &_bullet {
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: $darkBlue;
+        box-sizing: border-box;
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        margin: 0 0.6em 0 0;
+        cursor: pointer;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $darkBlue;
+        }
+        &:hover {
+            border-color: lighten($darkBlue, 20%);
+        }
+    }
+}

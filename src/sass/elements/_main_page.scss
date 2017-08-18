@@ -1,0 +1,17 @@
+.main_page_wr{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    section{
+        width: 56.375em;
+        outline:1px dotted red;
+        margin:1em 0 0 0;
+
+    }
+    aside{
+        width: 18.125em;
+        margin:1em 0 0 0;
+        outline:1px dotted red;
+    }
+}

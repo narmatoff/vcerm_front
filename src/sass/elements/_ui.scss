@@ -29,16 +29,22 @@ button,
     }
     &.bluebutton {
         background-color: $darkBlue;
+        border: 1px solid $darkBlue;
+
         color: $white;
         &:hover {
             background-color: $lightBlue;
+        border: 1px solid $lightBlue;
         }
     }
     &.orangebutton {
         background-color: $darkOrange;
+        border: 1px solid $darkOrange;
+        
         color: $white;
         &:hover {
             background-color: $lightOrange;
+        border: 1px solid $lightOrange;
         }
     }
     &.arrowedbutton {

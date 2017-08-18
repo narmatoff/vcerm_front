@@ -1,17 +1,14 @@
 header {
     width: 100%;
     background: linear-gradient(90deg, #c0c4d0 0%, #e2e8f0 68%, #c1c8d0 100%);
-    outline: 1px dotted red;
+    // outline: 1px dotted red;
 }
 
 .header {
-    width: $ContentWidt; // outline:1px dotted red;
-    margin: 0 auto;
     background-color: #185394;
     background: linear-gradient(90deg, #185394 0%, #1763A8 100%);
     height: 144px;
     padding: 32px;
-    box-sizing: border-box;
 
     display: flex;
     flex-flow: row-wrap;
