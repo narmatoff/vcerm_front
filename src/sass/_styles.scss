@@ -4,6 +4,7 @@
 @import "elements/main_page";
 
 
+@import "elements/footer";
 @import "elements/ui";
 
 
@@ -12,6 +13,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: $HelR;
+}
+
+a{
+    transition: all ease .2s;
 }
 
 html,
@@ -39,14 +44,14 @@ h1 {
     font-family: $Museo500;
     color: $darkBlue;
     font-size: 2.75em;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 h2 {
     font-family: $Museo500;
     color: #185394;
     font-size: 2.1em;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 h3 {
@@ -54,7 +59,7 @@ h3 {
     color: $darkBlue;
     font-size: 1em;
     text-transform: uppercase;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 h4 {
@@ -62,7 +67,7 @@ h4 {
     color: $darkBlue;
     font-size: 0.9em;
     text-transform: uppercase;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 h5 {
@@ -70,7 +75,7 @@ h5 {
     color: $darkBlue;
     font-size: 0.8em;
     text-transform: uppercase;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 h6 {
@@ -78,7 +83,7 @@ h6 {
     color: $darkBlue;
     font-size: 0.7em;
     text-transform: uppercase;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 
@@ -90,23 +95,27 @@ h6 {
 .iconed_text {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 278px; // outline:1px dotted red;
     &_info {
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        padding: 0 0 0 0;
         span {
             color: $white;
             font-size: 0.8em;
+            width: 200px;
         }
         a {
             font-family: $Museo500;
             color: $white;
             font-size: 1.2em;
-            margin: 0.4em 0 0 1em;
+            margin: .4em 0 0 0;
             transition: all ease .2s;
+            width: 200px;
             &:hover {
                 color: $darkOrange;
             }
@@ -114,7 +123,15 @@ h6 {
     }
 }
 
-.search {}
+.search {
+    background-image: url(../img/svg/search.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    &_light{
+        background-image: url(../img/svg/search_light.svg);
+        color:$white;
+    }
+}
 
 .be_pacient_online {
     background-image: url('../img/bepatientonline.png');

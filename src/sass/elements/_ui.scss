@@ -10,7 +10,8 @@ button,
     width: auto;
     padding: 0 3em;
     height: 51px;
-    color: lighten($lightBlack, 30%);
+    // color: lighten($lightBlack, 30%);
+    color: $darkBlue;
     background-color: $white;
     font-size: 0.9em; // font-weight: 700;
     font-weight: bold;

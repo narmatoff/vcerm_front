@@ -15,4 +15,10 @@ Pace.on('done', function() {
         }
     });
 
+
+    $('.flex_blocks').masonry({
+        // options
+        itemSelector: '.flex_blocks_item',
+        columnWidth: 16
+    });
 });

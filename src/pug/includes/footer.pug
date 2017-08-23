@@ -1,4 +1,61 @@
-footer
-    p lorem footer
-script(src="https://cdn.jsdelivr.net/g/jquery@3.2.1,jquery.validation@1.16.0,swiper@3.4.2")
+footer.full_width
+    .content_width
+        .footer_content
+            a(href="#",title="Название компании")
+                img(src="img/logo.png", alt="")
+            .footer_content_cont
+                .iconed_text
+                        .phone_icon
+                        .iconed_text_info
+                            span Телефон горячей линии
+                            a(href="tel:88123393939") +7 (812) 339-39-39
+                .iconed_text
+                        .point_map
+                        .iconed_text_info
+                            span
+                                a(href="#") 194044, Санкт-Петербург, ул. Академика Лебедева, 4/2. e-mail: medicine@nrcerm.ru
+            ul.footer_menu
+                li
+                    a(href="#") Информация для пациентов
+                li
+                    a(href="#") Отделения и центры
+                li
+                    a(href="#") Научная деятельность
+                li
+                    a(href="#") Образовательная деятельность
+                li
+                    a(href="#") Информация для профессионалов
+                li
+                    a(href="#") Продукты и услуги
+            .footer_content_dop
+                form(action="")
+                    input(type="text",placeholder="Начните искать").search.search_light
+                ul
+                    li
+                        a(href="#")
+                            .twitter_big_tr
+                    li
+                        a(href="#")
+                            .instagram_big_tr
+                    li
+                        a(href="#")
+                            .vk_big_tr
+                    li
+                        a(href="#")
+                            .fb_big_tr
+    .full_width.black_back
+        .copy_content.content_width
+            span © 2017 ФГБУ ВЦЭРМ им. А.М.Никифорова МЧС России. Все права защищены.
+            ul
+                li
+                    a(href="") Положение о конфиденциальности
+                li
+                    a(href="") Условия использования
+            a(href="").limited_capabilities Версия для слабовидящих
+
+
+
+
+
+script(src="https://cdn.jsdelivr.net/g/jquery@3.2.1,jquery.validation@1.16.0,swiper@3.4.2,masonry@4.2.0")
 script(src="js/all.min.js")

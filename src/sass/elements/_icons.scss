@@ -3,6 +3,10 @@
     @include sprite($phone_icon);
     display: inline-block;
 }
+.point_map {
+    @include sprite($point_map);
+    display: inline-block;
+}
 
 .vk {
     @include sprite($vk);
