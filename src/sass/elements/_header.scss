@@ -1,15 +1,20 @@
 header {
-    width: 100%;
-    background: linear-gradient(90deg, #c0c4d0 0%, #e2e8f0 68%, #c1c8d0 100%);
-    // outline: 1px dotted red;
+    width: 100%; // width: fit-content;
+    background: linear-gradient(90deg, #c0c4d0 0%, #e2e8f0 68%, #c1c8d0 100%); // outline: 1px dotted red;
+    &.header_notmain {
+        height: 447px;
+        background-image: url('../img/not_main_hb.jpg');
+        // background: transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .header {
-    background-color: #185394;
-    background: linear-gradient(90deg, #185394 0%, #1763A8 100%);
+    background-color: $darkBlue;
+    background: linear-gradient(90deg, $darkBlue 0%, lighten($darkBlue, 5%) 100%);
     height: 144px;
     padding: 32px;
-
     display: flex;
     flex-flow: row-wrap;
     justify-content: space-between;
@@ -30,9 +35,9 @@ header {
                 color: $white;
                 line-height: 1.3em;
                 font-family: $Museo500;
-                color: #ffffff;
+                color: $white;
                 font-size: 19px; // text-align: left;
-                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.14);
+                text-shadow: 0px 1px 2px lighten($black, 14%);
             }
         }
     }
@@ -71,8 +76,8 @@ header {
                     a {
                         color: $white;
                         font-size: 0.8em;
-                        transition:all ease .2s;
-                        &:hover{
+                        transition: all ease .2s;
+                        &:hover {
                             color: $darkOrange;
                         }
                     }
@@ -88,7 +93,6 @@ header {
             input {
                 width: 268px;
                 height: 31px;
-
             }
         }
     }

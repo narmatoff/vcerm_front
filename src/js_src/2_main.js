@@ -21,4 +21,14 @@ Pace.on('done', function() {
         itemSelector: '.flex_blocks_item',
         columnWidth: 16
     });
+
+
+    $('.aside_secondary_menu').children('li').click(function() {
+        // $('.aside_secondary_menu').children('li').removeClass('expanded');
+        $(this).toggleClass('expanded');
+
+    });
+
+    // $('.parallax-window').parallax({imageSrc: '../img/not_main_hb.jpg'});
+
 });

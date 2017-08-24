@@ -1,7 +1,9 @@
 @import "elements/header";
 @import "elements/nav";
 @import "elements/slider";
+@import "elements/aside";
 @import "elements/main_page";
+@import "elements/secondary_content";
 
 
 @import "elements/footer";
@@ -15,18 +17,18 @@
     font-family: $HelR;
 }
 
-a{
+a {
     transition: all ease .2s;
 }
 
 html,
 body {
     font-family: $HelR;
-    font-size: 1em;
+    font-size: 1em; // width:fit-content;
 }
 
 .full_width {
-    width: 100%;
+    width: 100%; // width: fit-content;
 }
 
 .content_width {
@@ -87,6 +89,14 @@ h6 {
 }
 
 
+p {
+    // /* font-family: HelveticaNeueCyr; */
+    color: $lightBlack;
+    line-height: 1.4em;
+    font-size: 0.95em;
+    margin:1em 0;
+}
+
 .logo {
     height: 121px;
     width: 103px;
@@ -127,9 +137,9 @@ h6 {
     background-image: url(../img/svg/search.svg);
     background-repeat: no-repeat;
     background-position: 95% center;
-    &_light{
+    &_light {
         background-image: url(../img/svg/search_light.svg);
-        color:$white;
+        color: $white;
     }
 }
 

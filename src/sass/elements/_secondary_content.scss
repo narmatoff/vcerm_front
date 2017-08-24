@@ -1,0 +1,124 @@
+.secondary_content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    .aside_secondary {
+        width: 18.125em;
+        margin: -3.90em 0 0 0;
+        &_h {
+            background-color: $darkBlue;
+            width: 100%;
+            height: 2.55em;
+            font-family: $Museo500;
+            color: $white;
+            font-size: 1.5em;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 0 0 1em;
+        }
+    }
+    section {
+        width: 57.188em; // outline: 1px dotted red;
+        padding: 0 0 0 7em;
+        box-sizing: border-box;
+        margin: -11em 0 0 0;
+        background-color: $white;
+        position: relative; 
+
+        // реализация №1 для контента на 100% до правого края
+        // box-shadow: 915px 0px 0px 0px #fff; 
+
+
+        // реализация №2 для контента на 100% до правого края для 4K
+        &:after {
+            content: '';
+            width: calc((100vw - 1222px) / 2);
+            height: 100%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: calc((100vw - 1222px) / -2);
+            background-color: $white;
+        }
+
+    }
+}
+
+.aside_secondary_menu {
+
+    // outline: 1px dotted red;
+    &>li {
+        transition: all ease .2s;
+        background-color: transparent;
+        border-bottom: 1px solid $grey;
+        position: relative;
+
+        &:after {
+            content: '';
+            background-image: url('../img/svg/small_right_arrow.svg');
+            background-repeat: no-repeat;
+            width: 8px;
+            height: 14px;
+            position: absolute;
+            top: 15px;
+            right: 5%;
+            transform: rotate(0deg);
+            transition: all ease .2s;
+        }
+        a {
+            width: 100%;
+            height: 46px; // display: block;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 .5em 0 1em;
+            box-sizing: border-box;
+            color: $darkBlue;
+        }
+        &:hover {
+            background-color: $grey;
+        }
+        &>ul {
+            overflow: hidden;
+            max-height: 0px; // transition: all ease .2s;
+            transition: max-height 0.2s ease-in-out;
+            li {
+                font-size: 0.9em;
+
+                a {
+                    overflow: hidden;
+                    padding: 0 1em 0 2.5em;
+                }
+            }
+        }
+
+        &.expanded {
+            background-color: $grey;
+            &:after {
+                transform: rotate(90deg);
+            }
+
+            &>ul {
+                background-color: $white;
+                max-height: 1000px; // transition: max-height 0.5s;
+                transition: max-height 0.2s ease-in-out;
+                li {
+                    a {
+                        &:hover {
+                            color: $darkOrange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.parallax-mirror {
+    z-index: 9
+}

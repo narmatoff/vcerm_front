@@ -3,6 +3,7 @@
     @include sprite($phone_icon);
     display: inline-block;
 }
+
 .point_map {
     @include sprite($point_map);
     display: inline-block;
@@ -67,5 +68,10 @@
 
 .twitter_big_tr {
     @include sprite($twitter_big_tr);
+    display: inline-block;
+}
+
+.favicon {
+    @include sprite($favicon);
     display: inline-block;
 }
