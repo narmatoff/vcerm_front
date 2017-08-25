@@ -10,6 +10,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 321px;
+
+
     &_dop {
         width: 18em;
         form {
@@ -23,8 +25,41 @@ footer {
             flex-flow: row-nowrap;
             justify-content: space-between;
             align-items: center;
+            li {
+                a {
+                    div {
+                        &:first-child {
+                            display: none;
+                        }
+                        &:last-child {
+                            display: inline-block;
+                        }
+                    }
+
+                    div {
+                        &:first-child {
+                            display: inline-block;
+                        }
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        div {
+
+                            &:first-child {
+                                display: none;
+                            }
+                            &:last-child {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+
     &_cont {
         padding: 1em 0;
         height: 196px;
@@ -57,12 +92,13 @@ footer {
     align-items: center;
     height: 56px;
     span {
-        font-family: HelveticaNeueCyr;
+        font-family: $HelR;
         color: #a0a0a0;
         font-size: 12px;
 
         text-align: left;
     }
+
     ul {
         display: flex;
         flex-flow: row-nowrap;
@@ -70,22 +106,23 @@ footer {
         align-items: center;
 
         li {
-            margin:0 1.5em 0 0;
+            margin: 0 1.5em 0 0;
             a {
-                font-family: HelveticaNeueCyr;
+                font-family: $HelR;
                 color: #a0a0a0;
                 font-size: 12px;
 
                 text-decoration: underline;
                 text-align: left;
-                &:hover{
-                    color:$darkOrange;
+                &:hover {
+                    color: $darkOrange;
                 }
             }
         }
     }
+
     a {
-        font-family: HelveticaNeueCyr;
+        font-family: $HelR;
         color: #ffffff;
         font-size: 14px;
 

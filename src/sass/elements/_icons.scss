@@ -75,3 +75,7 @@
     @include sprite($favicon);
     display: inline-block;
 }
+.content_file_img {
+    @include sprite($content_file);
+    display: inline-block;
+}

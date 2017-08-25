@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="51px" height="64px" viewBox="0 0 51 64">
+<style type="text/css"><![CDATA[
+.style0 {
+  font-size: 12px;
+  font-family: "HelveticaNeueCyr-Roman";
+  fill: rgb(255,255,255);
+}
+]]></style>
+<filter filterUnits="objectBoundingBox" x="-4.35" y="-3.23" width="108.70" height="106.45" id="filter0">
+<feGaussianBlur in="SourceAlpha" stdDeviation="1.00" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.06" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="0.50" dy="0.87" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+</filter>
+<clipPath id="clip0"><path fillRule="evenodd" d="M 1 62C 1 62 1-0 1-0 1-0 33-0 33-0 33-0 47 14 47 14 47 14 47 62 47 62 47 62 1 62 1 62Z"/></clipPath><defs>
+<symbol id="symbol0"><path fillRule="evenodd" d="M 4 62C 4 62 4-0 4-0 4-0 36-0 36-0 36-0 50 14 50 14 50 14 50 62 50 62 50 62 4 62 4 62Z"/></symbol></defs>
+<g><path fillRule="evenodd" d="M 4 62C 4 62 4-0 4-0 4-0 36-0 36-0 36-0 50 14 50 14 50 14 50 62 50 62 50 62 4 62 4 62Z" fill="rgb(255,255,255)" filter="url(#filter0)"/><use xlink:href="#symbol0" x="3" y="0" width="48" height="64" fill="none" stroke="rgb(213,218,224)" stroke-width="2.00px" clip-path="url(#clip0)"/></g><g></g><path fillRule="evenodd" d="M 36-0C 36-0 50 14 50 14 50 14 36 14 36 14 36 14 36-0 36-0Z" fill="rgb(213,217,225)"/><path fillRule="evenodd" d="M 12 32C 12 32 12 31 12 31 12 31 40 31 40 31 40 31 40 32 40 32 40 32 12 32 12 32ZM 12 27C 12 27 40 27 40 27 40 27 40 28 40 28 40 28 12 28 12 28 12 28 12 27 12 27ZM 12 23C 12 23 40 23 40 23 40 23 40 24 40 24 40 24 12 24 12 24 12 24 12 23 12 23Z" fill="rgb(23,83,147)"/><rect x="0" y="36" width="42" height="18" fill="rgb(23,83,147)"/><text transform="translate(2.00,49.00)" class="style0"><tspan x="0.00 7.99 16.26 23.22" fill="rgb(255,255,255)">DOCX</tspan></text></svg>

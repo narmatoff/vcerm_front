@@ -27,13 +27,9 @@
         box-sizing: border-box;
         margin: -11em 0 0 0;
         background-color: $white;
-        position: relative; 
+        position: relative;
+        box-shadow: 915px 0px 0px 0px #fff;
 
-        // реализация №1 для контента на 100% до правого края
-        // box-shadow: 915px 0px 0px 0px #fff; 
-
-
-        // реализация №2 для контента на 100% до правого края для 4K
         &:after {
             content: '';
             width: calc((100vw - 1222px) / 2);
@@ -42,9 +38,8 @@
             position: absolute;
             top: 0;
             right: calc((100vw - 1222px) / -2);
-            background-color: $white;
+            background-color: $white; // box-shadow: 915px 0px 0px 0px #fff;
         }
-
     }
 }
 

@@ -46,14 +46,16 @@ h1 {
     font-family: $Museo500;
     color: $darkBlue;
     font-size: 2.75em;
-    margin: 1.5em 0;
+    margin: 1.5em 0 1em 0;
+    line-height: 1.2em;
 }
 
 h2 {
     font-family: $Museo500;
     color: #185394;
     font-size: 2.1em;
-    margin: 1.5em 0;
+    margin: 1.5em 0 1em 0;
+    line-height: 1.2em;
 }
 
 h3 {
@@ -61,7 +63,8 @@ h3 {
     color: $darkBlue;
     font-size: 1em;
     text-transform: uppercase;
-    margin: 1.5em 0;
+    margin: 1.5em 0 1em 0;
+    line-height: 1.2em;
 }
 
 h4 {
@@ -69,7 +72,7 @@ h4 {
     color: $darkBlue;
     font-size: 0.9em;
     text-transform: uppercase;
-    margin: 1.5em 0;
+    margin: 1.5em 0 1em 0;
 }
 
 h5 {
@@ -88,14 +91,252 @@ h6 {
     margin: 1.5em 0;
 }
 
+.breadcrumbs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.8em 0;
+    li {
+        font-family: $HelR;
+        font-size: 0.9em;
+        line-height: 2em; // display: inline-block;
+        margin: 0;
+        color: darken($grey, 30%);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
 
-p {
-    // /* font-family: HelveticaNeueCyr; */
-    color: $lightBlack;
-    line-height: 1.4em;
-    font-size: 0.95em;
-    margin:1em 0;
+        &:first-child {}
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        &:after {
+            content: '';
+            width: 8px;
+            height: 14px;
+            height: 14px;
+            display: inline-block;
+            background-image: url('../img/svg/small_right_arrow.svg');
+            opacity: .4;
+            margin: 0 0.7em;
+        }
+        a {
+            color: $darkBlue;
+            text-align: left;
+            &:hover {
+                color: $darkOrange;
+            }
+        }
+    }
 }
+
+article {
+    p {
+        // /* font-family: HelveticaNeueCyr; */
+        color: $lightBlack;
+        line-height: 1.4em;
+        font-size: 0.95em;
+        margin: 1.5em 0;
+        position: relative;
+        &.important_p {
+            background-color: $grey;
+            padding: 2em 3em;
+            color: $darkBlue;
+        }
+        &.caption_p {
+            background-color: $grey;
+            padding: 1em 1.5em;
+            color: $lightBlack;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 0 3.5em 0;
+            &_left {
+                float: left;
+                width: 15em;
+                margin: 0 2em 5em 0;
+            }
+            &_right {
+                float: right;
+                width: 15em;
+                margin: 0 0 5em 2em;
+            }
+            span {
+                padding: 1em 0;
+                font-size: 0.9em;
+                display: inline-block;
+                width: 100%;
+                box-sizing: border-box; // outline:1px dotted red;
+                border-bottom: 1px solid $grey;
+                position: absolute;
+                bottom: -3.6em;
+                left: 0;
+                overflow: hidden;
+            }
+        }
+    }
+    .read_more {
+        // display: block;
+        &:before {
+            content: "";
+            display: inline-block;
+            background-image: url(../img/svg/small_right_arrow.svg);
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 12px;
+            background-size: cover;
+            margin: 0 1em 0 0;
+        }
+        height: 3.542em;
+        border-bottom: 1px solid darken($grey,
+        10%);
+        border-top: 1px solid darken($grey,
+        10%);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        font-size:.9em;
+        font-weight:bold;
+        padding:0 0 0 .5em;
+    }
+    .content_file {
+        padding: 1em 2em; // display:inline-block;
+        border: 1px solid darken($grey, 5%); // width:;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        &_img,
+        img {
+            margin: 0 1em 0 0;
+        }
+        &_descr {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            color: $lightBlack;
+            font-size: .9em;
+            line-height: 1.5em;
+        }
+    }
+    figure {
+        margin: 5em 0;
+        img {}
+        figcaption {
+            color: darken($grey, 48%);
+            font-size: 0.9em;
+            font-style: italic;
+            line-height: 1.2em;
+            padding: 42px 0 42px 0;
+            border-bottom: 1px solid darken($grey, 15%);
+            a {}
+        }
+    }
+    ul,
+    ol {
+        margin: 2em 0;
+
+        li {
+            color: $lightBlack;
+            line-height: 1.4em;
+            font-size: 0.95em;
+            margin: 1em 0;
+            padding: 0 0 0 1.5em;
+            &:before {
+                position: absolute;
+                content: counter(item) '.';
+                counter-increment: item;
+                left: 0.1em;
+                color: $darkBlue;
+                font-size: 0.9em;
+                font-weight: bold; // line-height: 20px;
+            }
+        }
+    }
+    ol {
+        counter-reset: item;
+        li {
+            position: relative;
+            &:before {
+                position: absolute;
+                content: counter(item) '. ';
+                counter-increment: item;
+                left: 0.1em;
+                color: $darkBlue;
+                font-size: 0.9em;
+                font-weight: bold; // line-height: 20px;
+            }
+        }
+    }
+    ul {
+        li {
+            position: relative;
+            &:before {
+                position: absolute;
+                content: '';
+                counter-increment: item;
+                left: 0.1em;
+                top: 0.5em;
+                font-size: 0.9em;
+                font-weight: bold;
+                background-color: $darkBlue;
+                width: 4px;
+                height: 4px;
+            }
+        }
+    }
+}
+
+table {
+    background-color: $grey;
+    width: 100%;
+    margin: 5em 0;
+    font-size: 0.9em;
+    tr {
+        // border: 1px solid darken($grey, 15%);
+        th {
+            height: 50px;
+            padding: 1.2em 2em;
+            border: 1px solid darken($grey, 10%);
+            text-align: center;
+            vertical-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:first-child {
+                text-align: left;
+            }
+        }
+        td {
+            border: 1px solid darken($grey, 10%);
+            vertical-align: center;
+            text-align: center;
+            padding: 1.2em 2em;
+            background-color: $white;
+            height: 50px;
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+    caption {
+        caption-side: bottom;
+        background-color: $white; // width:100%;
+        color: darken($grey, 48%); // font-size: 14px;
+        font-size: .9em;
+        padding: 2.8em 0 2.8em 0;
+        font-style: italic;
+        line-height: 1.2em;
+        text-align: left;
+        border-bottom: 1px solid darken($grey, 10%);
+    }
+}
+
 
 .logo {
     height: 121px;
@@ -107,7 +348,7 @@ p {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    width: 278px; // outline:1px dotted red;
+    width: 300px; // outline:1px dotted red;
     &_info {
         display: flex;
         flex-flow: column nowrap;
@@ -117,7 +358,7 @@ p {
         span {
             color: $white;
             font-size: 0.8em;
-            width: 200px;
+            width: 230px;
         }
         a {
             font-family: $Museo500;
@@ -125,9 +366,12 @@ p {
             font-size: 1.2em;
             margin: .4em 0 0 0;
             transition: all ease .2s;
-            width: 200px;
+            width: 230px;
             &:hover {
                 color: $darkOrange;
+            }
+            &.big_font {
+                font-size: 25px;
             }
         }
     }

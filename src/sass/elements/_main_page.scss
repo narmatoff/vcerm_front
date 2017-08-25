@@ -16,6 +16,9 @@
     background-color: $grey;
     padding: 1.9em 2.2em;
     margin: 1em 0 1em 0;
+    h3{
+        margin:0;
+    }
     &_item {
         a {
             display: block;
@@ -38,8 +41,12 @@
                 text-decoration: underline;
             }
             &:hover {
-                color: $darkOrange;
+                color: $darkBlue;
             }
+        }
+        span{
+            display:block;
+            margin:1em 0 0 0;
         }
     }
 }
@@ -66,6 +73,7 @@ hr {
         position: relative;
         overflow: hidden;
         margin: 0 0 16px 0;
+
         &_small {
             height: 224px;
         }
@@ -84,14 +92,17 @@ hr {
             }
         }
         &:hover {
+            background-color: $grey;
+            border: 1px solid $grey;
+            
             img {
                 opacity: .8;
             }
             .flex_blocks_item_h {
-                color: $darkOrange;
+                color: $darkBlue;
             }
             .flex_blocks_item_p {
-                color: $darkOrange;
+                color: $darkBlue;
             }
         }
         &_i {
