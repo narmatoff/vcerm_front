@@ -223,6 +223,9 @@ article {
             color: $lightBlack;
             font-size: .9em;
             line-height: 1.5em;
+            a {
+                text-decoration: underline;
+            }
         }
     }
     figure {
