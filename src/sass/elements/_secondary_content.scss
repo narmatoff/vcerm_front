@@ -114,6 +114,71 @@
     }
 }
 
-.parallax-mirror {
-    z-index: 9
+.abc_block {
+    height: 49px;
+    border-bottom: 1px solid darken($grey, 5%);
+    border-top: 1px solid darken($grey, 5%);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &_item {
+        display: inline-block;
+        padding: 0.18em 0.34em 0.18em 0.34em;
+        border-radius: 3px;
+        font-family: HelveticaNeueCyr;
+        color: $darkBlue;
+        font-size: 1em;
+        line-height: 24px;
+        text-align: left;
+        text-transform: uppercase;
+        &:first-child {
+            text-transform: capitalize;
+        }
+        &_current {
+            background-color: $darkOrange;
+            color: $white;
+            &:hover {
+                color: $white;
+            }
+        }
+        &_empty {
+            color: darken($grey, 10%);
+            &:hover {
+                color: darken($grey, 10%);
+            }
+        }
+    }
+}
+
+.abc_list {
+    padding: 0 0 1.5em 5.1em;
+    position: relative;
+    margin: 2em 0;
+    border-bottom: 1px solid darken($grey, 5%);
+    &:before {
+        content: attr(data-title);
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $grey;
+        font-size: 4.6em;
+    }
+    &_item {
+        margin: 0 0 1em 0;
+        a {
+            display: block;
+            color: $darkBlue;
+            font-size: 0.9em;
+            font-weight: 700;
+            line-height: 20px;
+        }
+        span {
+            color: $lightBlack;
+            font-size: 0.9em;
+            line-height: 20px;
+        }
+    }
 }
