@@ -3,15 +3,13 @@
 
 ### Путь до gulp lumserv: ###
 ```
-/var/www/virtualhosts/dym.lumserv.ru/www
+/var/www/virtualhosts/vcerm.lum/www
 ```
 
 ### Иконки лежат в: ###
 ```
  dist/img/icons/
 ```
-```
- Надо прописать в head правильные пути
 ```
 
 
@@ -36,27 +34,10 @@
     
 ```
 
-```
-    // для всплытия окна с ajax содержимым(пример ссылки)
-    <a href="some.html" class="ajax_popup">Открыть окно c ajax содержимым</a>
-    // класс ajax_popup обязателен
-    
-```
 
 ```
     // для всплытия окна с изображением(пример ссылки)
-    <a href="some.img" class="popup">Открыть окно c изображением</a>
+    <a href="some.img" class="popup_img">Открыть окно c изображением</a>
     // класс bigpic обязателен
-    
-```
-
-```
-    // зумер для картинок
-    //html
-    <img src="some.img" alt="" class="imgClass">
-    <div class="zoomContainer"></div>
-    // js
-    zoomerInit(document.querySelector('.imgClass'), document.querySelector('.zoomContainer'));
-    // при наведении на картинку - увеличенный экземпляр будет рендерится в .zoomContainer
     
 ```

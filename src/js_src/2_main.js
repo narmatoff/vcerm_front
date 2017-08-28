@@ -77,4 +77,11 @@ Pace.on('done', function() {
         // other options
     });
 
+    // якоря
+    $('.anchor').on('click', function(event) {
+        var link = $(this).attr('href');
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(link).offset().top }, 2000, 'easeInOutExpo');
+        return false;
+    });
+
 });
