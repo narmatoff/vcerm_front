@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="64" viewBox="0 0 51 64">
+    <style>
+        .style0{font-size:12px;font-family:&quot;HelveticaNeueCyr-Roman&quot;;fill:#fff}
+    </style>
+    <filter filterUnits="objectBoundingBox" x="-4.35" y="-3.23" width="108.7" height="106.45" id="filter0">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="dsBlurOut1"/>
+        <feFlood flood-color="#000" flood-opacity=".06" result="dsFloodOut1"/>
+        <feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+        <feOffset in="dsShadow1" dx=".5" dy=".87" result="dsOffset1"/>
+        <feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+        <feBlend in="dropShadow1" in2="SourceGraphic" result="sourceGraphic"/>
+    </filter>
+    <clipPath id="clip0">
+        <path d="M1 62V0h32l14 14v48H1z"/>
+    </clipPath>
+    <defs>
+        <symbol id="symbol0">
+            <path d="M4 62V0h32l14 14v48H4z"/>
+        </symbol>
+    </defs>
+    <path d="M4 62V0h32l14 14v48H4z" fill="#FFF" filter="url(#filter0)"/>
+    <use xlink:href="#symbol0" x="3" width="48" height="64" fill="none" stroke="#D5DAE0" stroke-width="2" clip-path="url(#clip0)"/>
+    <path d="M36 0l14 14H36V0z" fill="#D5D9E1"/>
+    <path d="M12 32v-1h28v1H12zm0-5h28v1H12v-1zm0-4h28v1H12v-1zM0 36h42v18H0z" fill="#175393"/>
+    <text transform="translate(2 49)" class="style0">
+        <tspan x="0.00 7.99 16.26 23.22" fill="#FFF">DOCX</tspan>
+    </text>
+</svg>
