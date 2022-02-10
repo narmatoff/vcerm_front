@@ -39,7 +39,7 @@
     "jshint": "^2.9.5",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "sass": "^0.5.0",
     "vinyl-ftp": "^0.6.0",
     "wiredep": "^4.0.0"
